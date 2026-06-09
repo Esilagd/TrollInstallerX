@@ -6,12 +6,12 @@
 ## Overview
 TrollInstallerX is a universal TrollStore installer. It focuses on being extremely reliable and easy to use. It is also very fast, being able to install TrollStore and/or its persistence helper in a matter of seconds on the latest devices.
 
-TrollInstallerX supports all devices running iOS 14.0 - 16.6.1, both arm64 and arm64e. It makes use of one of two different methods to install TrollStore, depending on what device and iOS you have. These methods are:
+TrollInstallerX supports all devices running iOS 14.0 - 26.4 both arm64 and arm64e. It makes use of one of two different methods to install TrollStore, depending on what device and iOS you have. These methods are:
 
 * **Direct installation**: using the [kfd](https://github.com/felix-pb/kfd) kernel exploit, along with the [dmaFail](https://github.com/opa334/Dopamine/blob/2.x/Application/Dopamine/Exploits/dmaFail/dmaFail.c) PPL bypass on iOS 15.2+ arm64e devices, TrollInstallerX can install both TrollStore and its persistence helper directly onto the device without having to leave the installer.
-  * Supports iOS 14.0 - 16.6.1 (arm64) and iOS 14.0 - 16.5.1 (arm64e).
-    * **Note**: A15, A16, and M2 devices on iOS 16.5.1 do not support this method.
-    * **Note**: A8 devices are only supported on iOS 14.0 - 15.1 for the time being.
+  * Supports iOS 14.0 - 16.6.1 (arm64) and iOS 14.0 - 26.4 (arm64e).
+    * **Note**: A15, A16, and M2 devices on iOS 26.4 do not support this method.
+    * **Note**: A8 devices are only supported on iOS 14.0 - 26.4 for the time being.
 
 * **Indirect installation**: Using the [kfd](https://github.com/felix-pb/kfd) kernel exploit, TrollInstallerX can replace a system application of your choice with the TrollStore persistence helper. This method only exists due to both the lack of a PPL bypass on iOS 16.6 and above, as well as the fact that dmaFail is non-functional on A15, A16, and M2 devices on iOS 16.5.1.
   * Supports iOS 16.5.1 - 16.6.1 (arm64e).
