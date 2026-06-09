@@ -102,9 +102,9 @@ struct Device {
         }
         
         if self.cpuFamily == .A8 {
-            isSupported = self.version < Version("15.2")
+            isSupported = self.version < Version("26.4")
         } else {
-            isSupported = (self.version <= Version("16.6.1")) || (self.isOnSupported17Beta && !((self.cpuFamily == .A15 && !isM2) || self.cpuFamily == .A16))
+            isSupported = (self.version <= Version("26.4")) || (self.isOnSupported26Beta && !((self.cpuFamily == .A15 && !isM2) || self.cpuFamily == .A16))
         }
     }
     
@@ -118,9 +118,9 @@ struct Device {
     var supportsDirectInstall: Bool {
         if !self.isArm64e { return true }
         if self.cpuFamily == .A15 || self.cpuFamily == .A16 {
-            return self.version < Version("16.5.1")
+            return self.version < Version(18.5)
         } else {
-            return self.version < Version("16.6")
+            return self.version < Version("26.4")
         }
     }
 }
